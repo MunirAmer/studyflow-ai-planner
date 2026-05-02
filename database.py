@@ -8,7 +8,7 @@ DB_PATH = DATA_DIR / "studyflow.db"
 
 def get_connection():
     DATA_DIR.mkdir(exist_ok=True)
-    connection = sqlite3.connect(DB_PATH)
+    connection = sqlite3.connect(DB_PATH, check_same_thread=False)
     return connection
 
 
